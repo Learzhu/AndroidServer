@@ -1,0 +1,60 @@
+ext {
+    plugins = [java          : 'java',
+               javaLibrary   : 'java-library',
+               android       : 'com.android.application',
+               androidLibrary: 'com.android.library',
+               maven         : 'com.github.dcendents.android-maven',
+               bintray       : 'com.jfrog.bintray']
+
+    android = [applicationId                : 'com.learzhu.androidserver',
+               compileSdkVersion            : 28,
+               buildToolsVersion            : '28.0.3',
+
+               libraryMinSdkVersion         : 9,
+               libraryTargetSdkVersion      : 27,
+               androidServerMinSdkVersion   : 15,
+               androidServerTargetSdkVersion: 28,
+
+               versionCode                  : 21,
+               versionName                  : '2.0.4',]
+
+    bintray = [version       : '2.0.4',
+               group         : 'com.yanzhenjie.andserver',
+
+               siteUrl       : 'https://github.com/yanzhenjie/AndServer',
+               gitUrl        : 'git@github.com:yanzhenjie/AndServer.git',
+
+               packaging     : 'aar',
+               name          : 'AndServer',
+               description   : 'Android web server',
+
+               licenseName   : 'The Apache Software License, Version 2.0',
+               licenseUrl    : 'http://www.apache.org/licenses/LICENSE-2.0.txt',
+
+               developerId   : 'yanzhenjie',
+               developerName : 'yanzhenjie',
+               developerEmail: 'smallajax@foxmail.com',
+
+               binrayLibrary : "andserver-api",
+               bintrayRepo   : "maven",
+               bintrayUser   : 'yolanda',
+               bintrayLicense: "Apache-2.0"]
+
+    dependencies = [autoService        : 'com.google.auto.service:auto-service:1.0-rc4',
+                    javaPoet           : 'com.squareup:javapoet:1.11.1',
+                    commonsLang        : 'org.apache.commons:commons-lang3:3.8.1',
+                    commonsCollections : 'org.apache.commons:commons-collections4:4.2',
+                    httpcore           : "com.yanzhenjie.apache:httpcore:4.4.10",
+                    fileupload         : "com.yanzhenjie.apache:fileupload:1.4",
+                    annotation         : 'com.android.support:support-annotations:27.1.1',
+
+                    andserverAnnotation: 'com.yanzhenjie.andserver:annotation:2.0.4',
+                    andserverApi       : 'com.yanzhenjie.andserver:api:2.0.4',
+                    andserver          : 'com.yanzhenjie.andserver:1.1.3',
+                    andserverProcessor : 'com.yanzhenjie.andserver:processor:2.0.4',
+
+                    appCompat          : 'com.android.support:appcompat-v7:27.1.1',
+                    design             : 'com.android.support:design:27.1.1',
+                    loading            : 'com.yanzhenjie:loading:1.0.0',
+                    json               : 'com.alibaba:fastjson:1.1.68.android']
+}
